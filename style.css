@@ -60,7 +60,7 @@
     background: url('images/Background.png') no-repeat center center;
     
     height: 100vh; /* Ensure it covers the entire viewport */
-    overflow-y: scroll; /* Allow scrolling */
+    /*overflow-y: scroll; /* Allow scrolling */
     background-attachment: fixed;
     background-size: cover;
   }
