@@ -1,0 +1,609 @@
+:root {
+  /* Font Weights */
+  --font-weight-title-black-900: 900;
+  --font-weight-bold-700: 700;
+  --font-weight-medium-500: 500;
+  --font-weight-regular-400: 400;
+
+  /* Typography */
+  --font-family-primary: 'Montserrat', sans-serif;
+
+  /* Spacing */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-s: 12px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --spacing-xxxl: 64px;
+  --spacing-xxxxl: 96px;
+
+  /* Colors */
+  --color-primary: #495675;
+  --color-secondary: #FFCB3D;
+  --color-neutral: #FFFFFF;
+  --color-glass-border: rgba(255, 255, 255, 0.55);
+  --color-inactive: #BDBDBD;
+
+  /* Glassmorphism */
+  --glass-background: linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(110, 110, 110, 0.15));
+  --glass-border-radius: 16px;
+  --glass-backdrop-blur: blur(17.5px);
+
+    /* Shadows */
+    --box-shadow-toggle: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    --shadow-default: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    --pillar-width: 40px;
+    --pillar-max-height: 240px;
+
+  h1{
+    font-family: var(--font-family-primary);
+    font-size: 32px;
+    font-weight: var(--font-weight-title-black-900);
+  }
+  h2 {
+    font-family: var(--font-family-primary);
+    font-size: 24px;
+  }
+  h3 {
+    font-family: var(--font-family-primary);
+    font-size: 16px;
+  }
+  
+}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url('images/Background.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh; /* Ensure it covers the entire viewport */
+    overflow-y: scroll; /* Allow scrolling */
+    background-attachment: scroll;
+  }
+  .card{
+    color: var(--glass-background);
+    border-radius: var(--glass-border-radius);
+    backdrop-filter: var(--glass-backdrop-blur);
+    margin: var(--spacing-s);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between; /* Spreads items to edges */
+    align-items: center; /* Aligns items vertically */
+    margin: var(--spacing-s);
+  }
+  
+  .homeScreen__title {
+    color: var(--color-primary);
+  }
+  
+  .weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--spacing-xxxl);
+    height: var(--spacing-l);
+    background: var(--color-neutral);
+    border: 2px solid var(--color-border);
+    box-shadow: var(--shadow-default);
+    border-radius: 16px;
+    padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-s);
+  }
+  
+  .weather__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-xxs);
+  }
+  
+  .weather__temperature {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-subheading);
+    font-weight: var(--font-weight-heading);
+    color: var(--color-primary);
+    line-height: normal;
+  }
+  
+  .weather__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card--savings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-m);
+    border-radius: var(--border-radius-savings);
+    border: var(--glass-border-radius);
+    background: var(--gradient-glass);
+    backdrop-filter: var(--blur-savings);
+    text-align: center;
+    border: 2px solid var(--color-border);
+    box-shadow: var(--shadow-default);
+    border-radius: 16px;
+    backdrop-filter: blur(17.5px);
+    
+  }
+
+  .savings__text {
+    font-weight: var( --font-weight-bold-700);
+    line-height: var(--line-height-savings);
+    color: var(--color-primary);
+    margin: 0;
+    padding-right: var(--spacing-xxs);
+  }
+
+  .savings__amount {
+    font-weight: var( --font-weight-bold-700);
+    color: var(--color-secondary);
+    padding-right: var(--spacing-xxs);
+    margin: 0; /* Reset default margin */
+    
+  }
+  
+  /* Wrapper for toggles */
+.card--toggles {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-m);
+}
+
+/* Individual toggle section */
+.toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 154px;
+  height: 84px;
+  padding: var(--spacing-xs) var(--spacing-m);
+  border-radius: 16px;
+  border: 2px solid var(--color-glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  text-align: center;
+}
+
+/* Labels */
+.toggle__label {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-label);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.toggle__label--info {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-info);
+  font-weight: var(--font-weight-info);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* Toggle switch */
+.toggle__switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 108px;
+  height: 36px;
+  border-radius: 100px;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-toggle);
+  padding: var(--spacing-xxs);
+}
+
+/* Icon around toggle */
+.toggle__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 37px;
+  background: var(--color-secondary);
+}
+
+/* Energy Sources Card */
+.card--energy-sources {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+/* Title */
+.card--energy-sources {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-s);
+  padding: var(--spacing-xs) var(--spacing-s);
+  font-weight: var(--font-weight-title-black-900);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.energy-sources__icon{
+  height: 48px;
+  width: auto;
+}
+/* Icons + Text Section */
+.energy-sources__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xxl);
+}
+
+/* Each Icon + Text Wrapper */
+.energy-sources__heater {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-align: center;
+  color: var(--color-primary);
+}
+
+/* Circle Wrapper */
+.energy-sources__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px; /* Circle width */
+  height: 64px; /* Circle height */
+  border-radius: 50%;
+  background-color: var(--c);
+  box-shadow: var(--shadow-default);
+  transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+/* Active State */
+.energy-sources__circle--active {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+.energy-sources__circle--inactive {
+  background-color: var(--color-inactive);
+  
+}
+
+/* Icons Inside Circles */
+.energy-sources__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.energy-sources__icon--active{
+  color: var(--color-secondary);
+}
+
+/* Individual Icon + Text */
+.energy-sources__heaterInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  width: var(--spacing-xxxxl);
+  color: var(--color-primary);
+}
+
+/* Separator Line */
+.energy-sources__separator {
+  width: 90%;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+/* "Dagens Data" Section */
+.energy-sources__data-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  align-self: stretch;
+}
+
+/* Subtitle */
+.energy-sources__subtitle {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular-400);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+/* Data (Brugt + Sparet) */
+.energy-sources__data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Stretch to card width */
+  gap: var(--spacing-m);
+}
+
+.energy-sources__data-item {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold-700);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+
+/* themometer */
+
+.card--temperatur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensure content stacks neatly */
+  position: relative; /* Prepares for draggable updates */
+}
+.card--temperaturesectionTitle{
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+}
+.card--temperaturSection{
+  padding-top: var(--spacing-m);
+}
+
+#card--temperatur-slider {
+  width: 200px;
+  height: 200px;
+  }
+
+.card--temperatur-inside {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #201c29;
+  z-index: 3; 
+}
+
+
+/* change fonttype for temperatur in thermometer */
+.rs-tooltip.edit,.rs-tooltip .rs-input {
+  font-size: 2rem; 
+  font-weight: bold; 
+  border: none;
+}
+
+/* removes borderbox around temperatur in thermometer */
+#card--temperatur-slider:hover .rs-tooltip, .rs-tooltip:focus, .rs-tooltip-text:focus {
+  transform: scale(1.1);
+  transition: .1s;
+  border: none;
+}
+
+
+/* change color on dragable point in thermometer */
+#card--temperatur-slider .rs-handle {
+  background-color:white;
+  filter: drop-shadow(3px -1px 2px rgba(0, 0, 0, 0.27));
+}
+
+/* change color on active slider */
+.rs-range-color {
+  background-color:  #FFCB3D !important;
+  border: none !important;
+} 
+
+/* change color on background color on slider */
+.rs-path-color {
+  background-color: #495675 !important;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset ;
+}
+
+/* removes border om thermometer */
+.rs-border{
+  border: none !important;
+}
+
+.room-item {
+  display: flex;
+  justify-content: space-between; /* Push left and right content apart */
+  align-items: center; /* Vertically center items */
+  padding: var(--spacing-m) var(--spacing-xs);
+  gap: var(--spacing-s); /* Space between internal items */
+  align-self: stretch; /* Make the item fill the width of the container */
+  background: rgba(255, 255, 255, 0.1); /* Optional: Add light background for clarity */
+  border-radius: 16px;
+}
+.card--rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers child items horizontally */
+  justify-content: center; /* Centers child items vertically */
+  gap: var(--spacing-m); /* Space between room items */
+  padding: var(--spacing-m);
+}
+
+/* Left Section: Icon + Name */
+.room-item__left {
+  display: flex;
+  align-items: center; /* Center-align the items vertically */
+  gap: var(--spacing-xs); /* Space between icon and name */
+}
+
+/* Right Section: Temperature + Icons */
+.room-item__right {
+  display: flex;
+  align-items: center; /* Center-align the items vertically */
+  gap: var(--spacing-xs); /* Space between temperature and arrow/lock */
+}
+
+.room-icon {
+  width: 24px; /* Adjust size for icons */
+  height: 24px; /* Maintain aspect ratio */
+}
+
+.room-item__name {
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: var(--font-weight-title-black-900);
+}
+
+.room-item__temperature {
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: var(--font-weight-title-black-900);
+}
+
+.room-item__icon {
+  font-size: 18px; /* Adjust size for icons */
+  color: var(--color-primary);
+}
+.rooms__addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-s); /* Gap between the icon and text */
+  height: 40px;
+  padding: var(--spacing-s) var(--spacing-xl); /* Adjust padding */
+  border-radius: 100px;
+  background: var(--color-primary); /* Use primary color for the background */
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25); /* Add shadow for depth */
+  color: var(--color-neutral); /* White text color */
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: var(--font-weight-title-black-900); /* Bold typography */
+  line-height: normal;
+  border: none; /* Remove default button border */
+
+}
+
+
+/* Icon inside the button */
+.Rooms__addButtonIcon {
+  height: 16px;
+}
+
+/* Text inside the button */
+.rooms__addButton-text {
+  font-size: 16px; /* Match the font size of the text */
+  font-weight: var(--font-weight-title-black-900); /* Bold typography */
+}
+
+.card--energy-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-m);
+  gap: var(--spacing-s);
+}
+
+.energy-chart__title {
+  font-family: var(--font-family-primary);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold-700);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-s);
+}
+
+/* Container for Indicators and Bars */
+.energy-chart__container {
+  display: flex;
+  align-items: flex-end; /* Align indicators and bars at the bottom */
+  gap: var(--spacing-s); /* Space between indicators and bars */
+  width: 100%; /* Ensure the container spans the card width */
+}
+
+/* Left Indicators */
+.energy-chart__indicators {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly distribute indicators */
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold-700);
+  color: var(--color-primary);
+  gap: var(--spacing-xl);
+}
+
+/* Pillar Bars */
+.energy-chart__bars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--spacing-s);
+  flex-grow: 1; /* Allow bars to take up remaining space */
+  height: 240px; /* Adjust as needed */
+}
+
+.energy-chart__bar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 24px;
+  height: var(--bar-height);
+  background: linear-gradient(180deg, var(--color-secondary) 0%, var(--color-neutral) 100%);
+  border-radius: 20px;
+  border: 1px solid var(--color-neutral);
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+  transition: height 0.3s ease;
+}
+
+/* Bottom Labels */
+.energy-chart__labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--spacing-xl);
+  gap: var(--spacing-xxs);
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold-700);
+  color: var(--color-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.energy-chart__labels span {
+  text-align: center;
+  width: 32px;
+}
+/* Bottom Menu */
+.bottom-menu {
+  position: fixed; /* Keeps it stuck to the bottom */
+  bottom: 0; /* Position it at the very bottom */
+  left: 0;
+  right: 0;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between; /* Evenly space the icons */
+  align-items: center; /* Center icons vertically */
+  background-color: var(--color-primary); /* Background color from root token */
+  padding: var(--spacing-s); /* Add padding around the menu */
+  height: 45px; /* Adjust as needed */
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+/* Menu Item */
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px; /* Icon width */
+  height: 48px; /* Icon height */ 
+  cursor: pointer; /* Makes the icons clickable */
+}
+
+/* Icons */
+.menu-icon {
+  width: 115px; /* Make the icon fill the item */
+  height: auto;
+  object-fit: contain; /* Keeps the aspect ratio */
+}
+
+.content {
+  padding-bottom:150px; /* Equal to the height of the bottom menu (45px) + some extra space */
+}
