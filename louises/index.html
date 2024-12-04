@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Screen</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="content">
+
+    <section class="header">
+      <!-- Home Title -->
+      <header class="homeScreen__title">
+        <h1>Hjem</h1>
+      </header>
+
+      <!-- Weather Section -->
+      <section class="weather">
+        <section class="weather__content">
+          <h2 class="weather__temperature">6°</h2>
+          <svg class="weather__icon" xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24"
+            fill="none">
+            <circle cx="18.5558" cy="10.881" r="10.881" fill="#ECC135" />
+            <path d="..." fill="#A8A8A8" stroke="white" />
+            <path d="..." fill="#A8A8A8" stroke="white" />
+          </svg>
+        </section>
+      </section>
+    </section>
+
+    <!-- Savings Section -->
+    <section class="card card--savings">
+      <h2 class="savings__text">Du har sparet</h2>
+      <h2 class="savings__amount">32 kr</h2>
+      <h2 class="savings__text">i år</h2>
+    </section>
+
+    <!-- Toggles Section -->
+    <section class="card card--toggles">
+      <!-- Toggle 1 -->
+      <section class="toggle">
+        <h3 class="toggle__label">Tilstand</h3>
+        <p class="toggle__label--info">(Hjemme)</p>
+        <section class="toggle__switch">
+          <section class="toggle__icon"></section>
+        </section>
+      </section>
+      <!-- Toggle 2 -->
+      <section class="toggle">
+        <h3 class="toggle__label">Rediger</h3>
+        <p class="toggle__label--info">(Home)</p>
+        <section class="toggle__switch">
+          <section class="toggle__icon"></section>
+        </section>
+      </section>
+    </section>
+
+    <!-- Energy Sources Section -->
+    <section class="card card--energy-sources">
+      <!-- Title -->
+      <h2>Varmekilder</h2>
+
+      <!-- Icons + Text -->
+      <section class="energy-sources__icons">
+        <!-- First Icon -->
+        <section class="energy-sources__heater">
+          <section class="energy-sources__circle energy-sources__circle--active">
+            <img src="images/icon_wood-pellet-stove.png" alt="Træpillefyr Icon" class="energy-sources__icon">
+          </section>
+          <h3>Træpillefyr</h3>
+        </section>
+
+        <!-- Second Icon -->
+        <section class="energy-sources__heater">
+          <section class="energy-sources__circle energy-sources__circle--inactive">
+            <img src="images/DistantHeating.svg" alt="Fjernvarme Icon" class="energy-sources__icon">
+          </section>
+          <h3>Fjernvarme</h3>
+        </section>
+      </section>
+
+      <!-- Separator Line -->
+      <section class="energy-sources__separator"></section>
+
+      <!-- "Dagens Data" Section -->
+      <section class="energy-sources__data-section">
+        <h2 class="energy-sources__subtitle">Dagens Data</h2>
+        <section class="energy-sources__data">
+          <p class="energy-sources__data-item">Brugt: 21 kWh</p>
+          <p class="energy-sources__data-item">Sparet: 0,50 kr</p>
+        </section>
+      </section>
+      <section>
+        <img src="images/dropdown.svg" alt="downdown arrow" class="energy-sources-dropdown">
+      </section>
+    </section>
+
+    <!-- Temperature Control Section -->
+    <section class="card card--temperaturSection">
+      <section class="card--temperaturesectionTitle">
+        <h2>Ændre Temperaturen</h2>
+      </section>
+      <section class="card--temperatur">
+        <section id="card--temperatur-slider" class="rslider"></section>
+        <span class="card--temperatur-inside">°</span>
+      </section>
+    </section>
+
+    <section class="card card--rooms">
+      <section class="room-item">
+        <!-- Left Section -->
+        <section class="room-item__left">
+          <img src="images/kitchen_icon.svg" alt="icon for kitchen" class="room-icon">
+          <h3 class="room-item__name">Køkken</h3>
+        </section>
+
+        <!-- Right Section -->
+        <section class="room-item__right">
+          <h3 class="room-item__temperature">22°</h3>
+          <span class="room-item__icon">➔</span>
+        </section>
+      </section>
+
+      <section class="room-item room-item--active">
+        <section class="room-item__left">
+          <img src="images/Bedroom_icon.svg" alt="icon for bedroom" class="room-icon">
+          <h3 class="room-item__name">Soveværelse</h3>
+        </section>
+
+        <section class="room-item__right">
+          <h3 class="room-item__temperature">22°</h3>
+          <span class="room-item__icon">➔</span>
+        </section>
+      </section>
+
+      <section class="room-item room-item--active">
+        <section class="room-item__left">
+          <img src="images/Livingroom_icon.svg" alt="icon for livingroom" class="room-icon">
+          <h3 class="room-item__name">Stue</h3>
+        </section>
+
+        <section class="room-item__right">
+          <h3 class="room-item__temperature">22°</h3>
+          <span class="room-item__icon">➔</span>
+        </section>
+      </section>
+
+      <section class="room-item">
+        <section class="room-item__left">
+          <img src="images/bathroom_icon.svg" alt="icon for bathroom" class="room-icon">
+          <h3 class="room-item__name">Badeværelse</h3>
+        </section>
+
+        <section class="room-item__right">
+          <img src="images/lock.svg" alt="icon for livingroom" class="room-Lockicon">
+          <h3 class="room-item__temperature">26°</h3>
+          <span class="room-item__icon">➔</span>
+        </section>
+      </section>
+
+      <!-- Add Room Button -->
+      <button class="rooms__addButton">
+        <img src="images/Add_Rooms_Icon.svg" alt="plus icon for button" class="Rooms__addButtonIcon">
+        <h3 class="rooms__addButton-text">Tilføj rum</h3>
+      </button>
+    </section>
+
+    <section class="card card--energy-chart">
+      <h2 class="energy-chart__title">Dagens energiforbrug</h2>
+
+      <!-- Container for Indicators and Bars -->
+      <section class="energy-chart__container">
+        <!-- Left Indicators -->
+        <section class="energy-chart__indicators">
+          <span>50</span>
+          <span>40</span>
+          <span>30</span>
+          <span>20</span>
+          <span>10</span>
+        </section>
+
+        <!-- Bars -->
+        <section class="energy-chart__bars">
+          <section class="energy-chart__bar" style="--bar-height: 50%;"></section>
+          <section class="energy-chart__bar" style="--bar-height: 40%;"></section>
+          <section class="energy-chart__bar" style="--bar-height: 30%;"></section>
+          <section class="energy-chart__bar" style="--bar-height: 70%;"></section>
+          <section class="energy-chart__bar" style="--bar-height: 90%;"></section>
+          <section class="energy-chart__bar" style="--bar-height: 20%;"></section>
+          <section class="energy-chart__bar" style="--bar-height: 10%;"></section>
+        </section>
+      </section>
+
+      <!-- Bottom Labels -->
+      <section class="energy-chart__labels">
+        <span>Man</span>
+        <span>Tir</span>
+        <span>Ons</span>
+        <span>Tor</span>
+        <span>Fre</span>
+        <span>Lør</span>
+        <span>Søn</span>
+      </section>
+    </section>
+
+
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-menu">
+      <section class="menu-item">
+        <img src="images/automating_icon.svg" alt="Icon 1" class="menu-icon">
+      </section>
+      <section class="menu-item">
+        <img src="images/Home_icon.svg" alt="Icon 2" class="menu-icon">
+      </section>
+      <section class="menu-item">
+        <img src="images/Statistics_icon.svg" alt="Icon 3" class="menu-icon">
+      </section>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.js"></script>
+
+    <script src="script.js"></script>
+  </section>
+</body>
+
+</html>
