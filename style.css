@@ -8,7 +8,7 @@ body {
 
 @supports ( -webkit-touch-callout : none) {
     body {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
     }
 }
     
