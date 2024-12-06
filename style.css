@@ -1,31 +1,4 @@
-body {
-    background-image: url('Background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    margin: 0;
-}
-
-@supports ( -webkit-touch-callout : none) {
-    body {
-    background-attachment: scroll !important;
-    }
-}
-    
-@supports not ( -webkit-touch-callout : none) {
-    body {
-    background-attachment: fixed !important;
-    }
-}
-
-.backgroundImage {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-}
-
-.content {
-    position: relative;
-    z-index: 1;
+.temp::after {
+    content: "°";
+    z-index: 2;
 }
